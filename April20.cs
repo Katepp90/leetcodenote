@@ -25,3 +25,19 @@ public class Solution {
         return target+1;
     }
 }
+
+// Improve the method, final version
+public class Solution {
+    public int RemoveDuplicates(int[] nums) {
+        if(nums.Length < 1) return 0;
+        int target = 0;
+        for(int i = 1; i < nums.Length; i++)
+        {
+            if(nums[target] != nums[i]){
+                target ++;
+                nums[target] = nums[i];
+            } 
+        }
+        return target+1;
+    }
+}
